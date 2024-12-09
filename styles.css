@@ -1,0 +1,1151 @@
+/* Link Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Variables CSS "var(--white)"*/
+:root{
+    --primary-color: #ffffff;
+    --primary-color-light: #eeeeee62; /*color del card principal*/
+    --primary-color-extra-ligth: #eeeeee62;
+    --secundary-color: #141414;
+    --secundary-color-dark: #001542;
+    --text-light: #000000;
+    --white: #000000;
+    --encabezado-texcolor:#ffffff;
+    --max-width:1200px;
+    --secundry-color-blue: #910000; /*yo lo agregue para tener otro color y jugar como queda si fuera el caso*/
+    --color-card-extra-ligth: #023452;
+    --color-card: #1fdbe962;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.section_container{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+}
+
+.section_header{
+    margin-bottom: 1rem;
+    font-size: 2.25rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--white); /* NUESTROS PROGRAMAS */
+}
+.section_subheader{
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    color: var(--text-light);
+}
+.btn{
+    padding: 1rem 2rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--encabezado-texcolor); /*boton solicitar*/
+    background-color: #003366;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn:hover{ /*Efecto para resaltar el boton*/
+    background-color: var(--secundary-color-dark);
+}
+
+img{
+    width: 100%;
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    
+}
+.bg_blur{ /*EFECTO DE LUZ VERDE LUMINADO*/
+    position: absolute;
+    box-shadow: 0 0 1000px 50px var(--secundary-color);
+    z-index: -1;
+}
+
+body{
+    background-color: var(--primary-color); /*Color de FONDO DE LA PAGINA*/
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.nav_logo{ /* TAMAÑO DEL LOGO */
+    max-width: 250px;
+}
+
+.nav_links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem; /* ES COMANDO SIRVE PARA SEPARAR EL ESPACIO ENTRE CADA PALABRA*/
+}
+
+.link a{
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: var(--white); /*con esto se ha cambiado el color de las palabras del encabezazdo*/
+}
+
+.link a::after{ /*lo cambió por "before"*/
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--secundary-color);
+    transition: .3s;
+}
+.link a:hover::after{
+    width: 70%;
+
+}
+
+.header_container{ /*con este codigo se esta dando una posicion y tamaño a la imagen del hombre cargando pesas*/
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+.header_container::before{
+    content: "■■■■■■■■■■■■■■■";
+    position: absolute;
+    bottom: 5rem;
+    right: 20rem;
+    font-size: 10rem;
+    font-weight: 700;
+    line-height: 7rem;
+    color: var(--white);
+    opacity: 0.05;
+    z-index: -1;
+}
+.header_blur{
+    bottom: 5rem;
+    right: 0;
+}
+
+.header_content h4{ /* se cambia el color verde las palabras "EMPIEZA FUERTE, TERMINA MÁS FUERTE"*/
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--secundary-color);
+}
+.header_content h1{ /* se cambia a color verde las palabras "CONSTRUYE UN CUERPO FUERTE."*/
+    margin-bottom: 1rem;
+    font-size: 4.3rem;
+    font-weight: 700;
+    line-height: 5rem;
+    color: var(--white);
+}
+.header_content h1 span{ /* efecto de relleno transparente con bordes blancos, "CONSTRUYE"*/
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px var(--white);
+}
+.header_content p{
+    margin-bottom: 2rem;
+    color: var(--text-light);
+}
+.header_image{
+    position: relative;
+}
+.header_image::before{
+    content: "o";  /* se puede cambiar por otro caracter*/
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40rem;
+    font-weight: 400;
+    line-height: 20rem;
+    color: var(--secundary-color);
+    opacity: 0.1;
+    z-index: -1;
+}
+.header_image img{
+    max-width: 350px;
+    margin: auto;
+}
+
+.explore_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.explore_nav{
+    display: felx;
+    align-items: center;
+    gap: 2rem;
+}
+.explore_nav span{
+    padding: 0 6px;
+    font-size: 1.5rem;
+    color: var(--white);
+    border: 2px solid var(--white);
+    border-radius: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.explore_nav span:hover{
+    color: var(--secundary-color);
+    border-color: var(--secundary-color);
+}
+.explore_grid{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.explore_card{
+    padding: 1rem;
+    background-color: var(--primary-color-light);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.explore_card:hover{ /*codigo para efecto de borde de cuadro*/
+    background-color: var(--color-card-extra-ligth);
+    border-color: var(--secundary-color);
+}
+.explore_card span{
+    display: inline-block;
+    padding: 2px 9px;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: var(--encabezado-texcolor); /* color de las figuritas donde dice NUESTROS SERVICIOS*/
+    background-color: var(--secundary-color-dark);
+    border-radius: 5px;
+}
+
+.explore_card h4{ /* se cambia el color de los subtitulos de los recuadros "Fortaleza" "Aptitup Física" "Perder grasa" "Aumento de peso"*/
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--white); /* se puedo poner el color nombrando la variable o colocar el código del color*/
+}
+
+.explore_card p{ /* se cambia el color del contenido de los recuadros*/
+    margin-bottom: 1rem;
+    color: var(--text-light);
+}
+.explore_card a{ /*min 23:07 */
+    color: var(--white);
+    transition: 0.3s;
+}
+
+.explore_card a:hover{
+    color: var(--secundary-color);
+}
+
+/*min 25:05, segunda parte CSS*/
+.class_container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+/*----------------------*/ /*aqui se esta itentando posicionar las imagenes al lado izquierdo y el texto al lado derecho*/
+/*para este código (linea 269-278) se está vinculando con la etiqueta en el archivo HTML (IMAGENES POSICIONAR)*/
+
+.class_image{
+    position: relative;
+}
+.class_image .class_img-1{
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 500px;
+    border-radius: 10px;
+}
+.class_image{
+    position: relative;
+}
+.class_image .class_img-2{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    max-width: 300px;
+    border-radius: 10px;
+}
+.class_content{
+    padding: 2rem 0;
+}
+
+.class_container .section_header{
+    text-align: left;
+    max-width: 400px;
+}
+/*---------------------------------------*/
+.class_content p{
+    margin-bottom: 4rem;
+    color: var(--text-light);
+}
+
+/* parte 3 css*/
+
+.join_image{
+    margin-top: 4rem;
+    position: relative;
+}
+
+.join_image img{
+    border-radius: 10px;
+}/*se esta posicionando y dando espacio entre imagen y texto de la página*/
+
+.join_grid{
+    position: absolute;
+    bottom: -5rem;
+    width: calc(100% - 4rem);
+    padding: 2rem;
+    margin: 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color: var(--primary-color-extra-ligth);
+    border-radius: 10px;
+}/*se a posicionado los recuadros casi dentro de la imagen para que tenga ese estilo elegante*/
+.join_card{
+    flex: 1 1 250px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.join_card span{
+    padding: 5px 12px;
+    font-size: 1.75rem;
+    color: var(--encabezado-texcolor); /*color de la figuritas donde esta la foto de la cantera*/
+    background-color: var(--secundary-color-dark);
+    border-radius: 5px;
+}
+.join_card h4{
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--white); /*esta son las cards donde esta la foto de la cantera*/
+}
+
+.join_card p{
+    color: var(--text-light);
+}
+
+/* 4ta parte 34:32 ir al codigo fuente de html */
+
+/* otra parte pero ahora en el CSS*/
+
+.price_grid{ /* con este codigo se esta posicionando el contenido de esta parte en columnas*/
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.price_card{
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color-extra-ligth);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.price_card:hover{ /* con este codigo se esta dando forma de resalte en los marcos al acercar el cursor*/
+    background-color: var(--primary-color-extra-ligth);
+    border-color: var(--secundary-color);
+}
+
+.price_card_content{ /* se esta ajustando los botones en la parte inferior central del recuadro*/
+    flex: 1;
+    margin-bottom: 2rem;
+}
+
+.price_card h4{
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--white);
+}
+
+.price_card h3{
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-size: 600;
+    color: var(--white);
+    border-bottom: 2px solid --white;
+}
+
+.price_card p{
+    margin-bottom: 0.75rem;
+    color: var(--white);
+}
+
+.price_card p i{
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+    color: var(--secundary-color);
+}
+
+.price_btn{
+    color: var(--secundary-color);
+    background-color: transparent;
+    border: 2px solid var(--secundary-color);
+}
+
+.price_btn:hover{
+    color: var(--white);
+    background-color: var(--secundary-color);
+}
+
+
+/* ir donde el codigo HTML 42:52*/
+/*<!--min 46:13 pasamos al CSS-->*/
+
+.review{
+    background-color: var(--primary-color-extra-ligth);
+}
+.review_container{
+    display: flex;
+    gap: 2rem;
+}
+.review_container > span{
+    font-size: 6rem;
+    color: var(--secundary-color);
+    opacity: 0.5;
+}
+.review_content{
+    flex: 1;
+}
+
+.review_content h4{
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--white);
+}
+.review_content p{
+    max-width: 800px;
+    margin-bottom: 2rem;
+    color: var(--text-light);
+}
+
+.review_rating span{
+
+    font-size: 1.5rem;
+    color: var(--secundary-color);
+}
+
+.review_footer{ /* se le está dando posicion a la imagen*/
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.review_member{
+    display: flex;
+    align-items: flex-start; /*center*/
+    gap: 1rem;
+}
+
+.review_member img{
+    max-width: 60px; /*tamaño de la imagen (240)*/
+    border-radius: 100%;
+}
+
+.review_member_details h4{
+    margin-bottom: 0;
+}
+
+.review_nav{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.review_nav span{
+    font-size: 2rem;
+    color: var(--secundary-color);
+    cursor: pointer;
+}
+
+/* pasamos al html 50:25-6*/
+
+/*54:46 continuamos con el CSS*/
+
+.footer_container{
+    position: relative;
+    display: grid;
+    grid-template-columns: 400px repeat(3, 1fr); /*le da posicion al contenido de esta sección*/
+    gap: 2rem;
+}
+.footer_blur{
+    bottom: 0;
+    right: 0;
+}
+.footer_logo{
+    max-width: 150px;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.footer_col p{
+    margin-bottom: 2rem;
+    color: var(--text-light);
+}
+
+.footer_socials{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer_socials a{
+    padding: 5px 10px;
+    font-size: 1.25rem;
+    color: var(--secundary-color);
+    border: 1 px solid var(--secundary-color);
+    border-radius: 100%;
+    transition: .3s;
+}
+.footer_socials a:hover{
+    color: var(--white);
+    background-color: var(--secundary-color);
+}
+
+.footer_col h4{
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--white);
+}
+.footer_col > a{
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+    transition: .3s;
+}
+
+.footer_col > a:hover{
+    color: var(--secundary-color);
+}
+
+.footer_bar{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1rem;
+    font-size: .8rem;
+    color: var(--white);   
+}
+
+/*59:13*/
+
+@media (width < 900px){
+    .nav_links{
+        display: none;
+    }
+
+    .header_container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .header_image{
+        grid-area: 1/1/2/2;
+    }
+    .explore_grid{
+        grid-template-columns: repeat(2, 1fr); /*1:02:46*/
+        gap: 1rem; /*1:02:46*/
+    }
+    .class_container{
+        grid-template-columns: repeat(1, 1fr); /*grid-template-columns: 1fr 200px;*/ /*1:02:46*/
+    }
+
+    .class_image{
+        min-height: 500px; /*min-width: 500px;*/
+    }
+}
+
+
+@media (width < 600px){
+    .explore_header{
+        flex-direction: column;
+    }
+    .explore_grid{
+        grid-template-columns: repeat(1 ,1fr);
+    }
+    .join_container{
+        margin-bottom: 15rem;
+    }
+
+.join_grid{
+    width: 100%;
+    margin: 0;
+    bottom: -20rem;
+}
+.price_grid{
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.review_container{
+    flex-direction: column;
+    gap: 0;
+}
+
+.review_footer{
+    flex-direction: column;
+}
+.footer_container{
+    grid-template-columns: 1fr 150px;
+}
+
+.footer_bar{
+    text-align: center;
+}
+
+} /*1:02:46*/
+
+
+
+/*___________________________________________________________________________________*/
+
+
+/* Animación de entrada al hacer scroll */
+@keyframes slide-up {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Aplicar animación a elementos */
+.explore_card, .price_card, .review_content {
+    animation: slide-up 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+
+/*****************************************************************************************/
+
+/* Estilos de la sección de contacto */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #f7f7f7, #e0e0e0);
+}
+
+.contact-form-container {
+    width: 50%; /* Ocupa el 50% de la página en pantallas grandes */
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.contact-form-container h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.contact-form-container p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.contact-form-container .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form-container input:focus,
+.contact-form-container textarea:focus {
+    border-color: #ff8c00;
+    box-shadow: 0 0 8px rgba(255, 140, 0, 0.6);
+    outline: none;
+}
+
+.contact-form-container button {
+    padding: 14px 30px;
+    background-color: #ff8c00;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form-container button:hover {
+    background-color: #e77c00;
+}
+
+/* Diseño responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    .contact-form-container {
+        width: 90%;
+        margin-top: 20px;
+    }
+}
+
+/*****************************************************************************************/
+/*****************************************************************************************/
+
+
+/* Estilos para la Sección de Servicios */
+.services {
+    background-color: #f8f9fa;
+    padding: 1rem 1rem; /* Reduce el padding superior (espaciado superior)*/
+}
+
+.services .section_container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.services .section_header {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #343a40;
+    margin-bottom: 2rem;
+}
+
+.services .section_description {
+    font-size: 1.1rem;
+    color: #6c757d;
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.services_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.service_card {
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Imagen de fondo para las cards */
+.service_image {
+    background-size: cover;
+    background-position: center;
+    height: 220px;
+}
+
+/* Card 1: Alquiler de Maquinaria Pesada */
+.service_card:nth-child(1) .service_image {
+    background-image: url('Img/img_servicios/volquete.jpg');
+}
+
+/* Card 2: Venta de Agregados de Construcción */
+.service_card:nth-child(2) .service_image {
+    background-image: url('Img/img_servicios/cisterna.jpg');
+}
+
+/* Card 3: Asesoría y Gestión de Proyectos */
+.service_card:nth-child(3) .service_image {
+    background-image: url('Img/img_servicios/cargador_frontal.jpg');
+}
+
+.service_content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.service_content h4 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 1rem;
+}
+
+.service_content p {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+}
+
+.service_content .btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.service_card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.service_card:hover .btn {
+    background-color: #0056b3;
+}
+
+@media (max-width: 900px) {
+    .services_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .services_grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/***********END CSS SERVICIOS****************************************/
+
+
+    /* Estilo para la sección Nosotros */
+    .nosotros {
+        padding: 50px 0;
+        background: linear-gradient(135deg, #1e3c72, #2a9d8f); /* Azul oscuro y verde */
+        color: #fff;
+        text-align: center;
+    }
+
+    .nosotros .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .nosotros .section-title {
+        font-size: 2.8em;
+        font-weight: bold;
+        color: #fff;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+
+    .nosotros .section-description {
+        font-size: 1.2em;
+        color: #f1f1f1;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto 40px;
+    }
+
+    /* Misión, Visión y Valores */
+    .mission-vision-values {
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+        margin-bottom: 40px;
+        text-align: left;
+    }
+
+    .mission-vision-values .item {
+        flex: 1;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .mission-vision-values .item:hover {
+        transform: translateY(-10px);
+    }
+
+    .mission-vision-values .item i {
+        font-size: 2.5em;
+        color: #2a9d8f; /* Verde claro para los iconos */
+        margin-bottom: 15px;
+    }
+
+    .mission-vision-values .item h3 {
+        font-size: 1.8em;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 15px;
+    }
+
+    .mission-vision-values .item p {
+        font-size: 1.1em;
+        color: #666;
+        line-height: 1.6;
+    }
+
+    /* Valores con íconos representativos en formato horizontal */
+    .values {
+        margin-top: 40px;
+    }
+
+    .values h3 {
+        font-size: 2.5em;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+
+    .values-cards {
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .values-cards .card {
+        background-color: #fff;
+        padding: 30px;
+        text-align: center;
+        flex: 1;
+        max-width: 200px;
+        border-radius: 10px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .values-cards .card:hover {
+        transform: translateY(-10px);
+    }
+
+    .values-cards .card i {
+        font-size: 3em;
+        color: #2a9d8f;
+        margin-bottom: 15px;
+    }
+
+    .values-cards .card h4 {
+        font-size: 1.4em;
+        font-weight: bold;
+        color: #333;
+        margin-top: 10px;
+    }
+
+/****************************************styles NOSOTROS******************************************/
+/***************************************SUJETO A MODIFICACION, DADO QUE ALGUNAS REGLAS DE ESTILO SE ESTAN REPITIENDO*/
+
+/* Estilos para la sección de "Sobre Nosotros" */
+.class_container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 2rem;
+}
+
+.class_image {
+    position: relative;
+    width: 50%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.class_image .bg_blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0);
+    z-index: 1;
+}
+
+.class_img-1, .class_img-2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+/* Estilo del contenido */
+.class_content {
+    width: 45%;
+    padding: 2rem;
+}
+
+.class_content .section_header {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #343a40;
+}
+
+.class_content p {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+}
+
+.class_content .btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.class_content .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Misión y Visión */
+.mission-vision-values {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3rem;
+    padding: 0 2rem;
+}
+
+.mission-vision-values .item {
+    text-align: center;
+    width: 45%;
+}
+
+.mission-vision-values .item h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+.mission-vision-values .item p {
+    color: #6c757d;
+    font-size: 1rem;
+}
+
+/* Estilos de los Valores */
+/* Estilos de los Valores */
+.values {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.values h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #343a40;
+}
+
+.values-cards {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 columnas */
+    gap: 1rem;
+    padding: 0 2rem;
+}
+
+/* Asegura que todas las tarjetas tengan el mismo tamaño */
+.values-cards .card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Asegura que todas las tarjetas tengan la misma altura */
+}
+
+.values-cards .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.values-cards .card i {
+    font-size: 2.5rem; /* Mantén el tamaño de íconos consistente */
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.values-cards .card h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #343a40;
+    text-align: center;
+    margin: 0;
+}
+
+/* Responsividad */
+@media (max-width: 900px) {
+    .values-cards {
+        grid-template-columns: repeat(3, 1fr); /* Ajuste a 3 columnas */
+    }
+}
+
+@media (max-width: 600px) {
+    .values-cards {
+        grid-template-columns: 1fr; /* Ajuste a 1 columna */
+    }
+
+    .values-cards .card i {
+        font-size: 2rem; /* Ajusta el tamaño del ícono en pantallas pequeñas */
+    }
+}
+
+
+
+
